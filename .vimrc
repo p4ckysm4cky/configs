@@ -26,8 +26,8 @@ nnoremap k gk
 nnoremap <S-h> gT
 nnoremap <S-l> gt
 
-nnoremap <S-j> 5j
-nnoremap <S-k> 5k
+nnoremap <S-j> 5gj
+nnoremap <S-k> 5gk
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
