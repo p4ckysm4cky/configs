@@ -20,16 +20,16 @@ set autoindent
 set smartindent
 
 " Navigation
-nnoremap j gj
-nnoremap k gk
+noremap j gj
+noremap k gk
 
-nnoremap <S-h> gT
-nnoremap <S-l> gt
+noremap <S-h> gT
+noremap <S-l> gt
 
-nnoremap <S-j> 5gj
-nnoremap <S-k> 5gk
+noremap <S-j> 5gj
+noremap <S-k> 5gk
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
