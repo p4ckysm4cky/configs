@@ -31,3 +31,8 @@ noremap <S-k> 5gk
 
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
+
+" Leader key
+let mapleader = " "
+nnoremap <Space> <Nop>
+vnoremap <Space> <Nop>
