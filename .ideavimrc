@@ -1,0 +1,3 @@
+source ~/.vimrc
+nmap gi :action GotoImplementation<CR>
+nmap gh :action ShowHoverInfo<CR>
