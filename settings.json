@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
+    "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-d>": true,
         "<C-s>": false,
