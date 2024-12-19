@@ -36,3 +36,6 @@ noremap <C-l> <C-w>l
 let mapleader = " "
 nnoremap <Space> <Nop>
 vnoremap <Space> <Nop>
+
+" Custom binds
+nnoremap <Leader>r :set relativenumber!<CR>
