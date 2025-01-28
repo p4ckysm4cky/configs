@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = main
+[alias]
+        lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(yellow)%ad%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=human --decorate=full
+        cleanup = !git reset --hard && git clean -df
+		stashl = stash list --oneline
+		stashm = !git stash push --include-untracked -m
+		stasha = stash apply
+		stashp = stash pop
+		stashc = stash clear
+		restorea = restore ./
+		st = status -s --branch
+		aa = add -A
