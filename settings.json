@@ -10,5 +10,6 @@
         "<C-b>": false
     },
     "vim.vimrc.enable": true,
-    "editor.cursorSurroundingLines": 8
+    "editor.cursorSurroundingLines": 8,
+    "editor.wordWrap": "on"
 }

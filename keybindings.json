@@ -18,5 +18,15 @@
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
         "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "when": "codeActionMenuVisible",
+        "command": "selectPrevCodeAction"
+    },
+    {
+        "key": "ctrl+j",
+        "when": "codeActionMenuVisible",
+        "command": "selectNextCodeAction"
     }
 ]
