@@ -40,3 +40,8 @@ vnoremap <Space> <Nop>
 
 " Custom binds
 nnoremap <Leader>r :set relativenumber!<CR>
+
+" Clipboard binds
+vnoremap Y "+y
+vnoremap P "+p
+nnoremap P "+p
