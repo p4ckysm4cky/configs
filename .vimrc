@@ -45,3 +45,6 @@ nnoremap <Leader>r :set relativenumber!<CR>
 vnoremap Y "+y
 vnoremap P "+p
 nnoremap P "+p
+
+" Disable special numeric format
+set nrformats=
