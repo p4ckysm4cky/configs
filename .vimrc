@@ -6,6 +6,7 @@ set laststatus=2
 set visualbell
 set wrap
 set relativenumber
+set t_Co=16
 
 " Searching
 set incsearch
