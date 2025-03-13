@@ -33,8 +33,33 @@ noremap <S-k> 5gk
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
+" Mark navigation
 nnoremap <Space> '
 vnoremap <Space> '
+
+nnoremap mq mQ
+vnoremap mq mQ
+
+nnoremap mw mW
+vnoremap mw mW
+
+nnoremap me mE
+vnoremap me mE
+
+nnoremap mr mR
+vnoremap mr mR
+
+nmap <Space>q <Space>Q
+vmap <Space>q <Space>Q
+
+nmap <Space>w <Space>W
+vmap <Space>w <Space>W
+
+nmap <Space>e <Space>E
+vmap <Space>e <Space>E
+
+nmap <Space>r <Space>R
+vmap <Space>r <Space>R
 
 " Custom binds
 nnoremap <Leader>r :set relativenumber!<CR>
