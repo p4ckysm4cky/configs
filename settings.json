@@ -11,5 +11,6 @@
     },
     "vim.vimrc.enable": true,
     "editor.cursorSurroundingLines": 8,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "terminal.integrated.allowChords": false
 }

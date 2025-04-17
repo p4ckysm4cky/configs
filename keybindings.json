@@ -28,5 +28,9 @@
         "key": "ctrl+j",
         "when": "codeActionMenuVisible",
         "command": "selectNextCodeAction"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]
