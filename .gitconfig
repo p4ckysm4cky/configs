@@ -3,7 +3,7 @@
 [core]
 	editor = vim
 [alias]
-	lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(yellow)%ad%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=human --decorate=full
+	lg = log --pretty=format:'%C(bold red)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(yellow)%ad%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=human --decorate=full
 	cleanup = !git reset --hard && git clean -df
 	select = "!git checkout $(git branch | grep -v \"^\\*\" | fzf)"
 	delete = "!git branch -d $(git branch | grep -v \"^\\*\" | fzf)"
