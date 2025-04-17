@@ -13,6 +13,6 @@
 	stashp = stash pop
 	stashc = stash clear
 	restorea = restore ./
-	restoreb = "!git restore ./ --source=$(git branch | grep -v \"^\\*\" | fzf)"
+	restoreb = "!git restore ./ --source$(git branch | grep -v \"^\\*\" | fzf)"
 	st = status -s --branch
 	aa = add -A
