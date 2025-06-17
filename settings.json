@@ -13,6 +13,7 @@
     "vim.vimrc.enable": true,
     "editor.cursorSurroundingLines": 8,
     "editor.wordWrap": "on",
+    "editor.smoothScrolling": true,
     "terminal.integrated.allowChords": false,
     "workbench.editor.wrapTabs": true
 }
