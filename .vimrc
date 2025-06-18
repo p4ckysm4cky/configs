@@ -35,9 +35,6 @@ noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
 " Mark navigation
-nnoremap <Space> '
-vnoremap <Space> '
-
 nnoremap mq mQ
 vnoremap mq mQ
 
@@ -50,19 +47,20 @@ vnoremap me mE
 nnoremap mr mR
 vnoremap mr mR
 
-nmap <Space>q <Space>Q
-vmap <Space>q <Space>Q
+nnoremap 'q 'Q
+vnoremap 'q 'Q
 
-nmap <Space>w <Space>W
-vmap <Space>w <Space>W
+nnoremap 'w 'W
+vnoremap 'w 'W
 
-nmap <Space>e <Space>E
-vmap <Space>e <Space>E
+nnoremap 'e 'E
+vnoremap 'e 'E
 
-nmap <Space>r <Space>R
-vmap <Space>r <Space>R
+nnoremap 'r 'R
+vnoremap 'r 'R
 
 " Custom binds
+let mapleader = " "
 nnoremap <Leader>r :set relativenumber!<CR>
 
 " Clipboard binds

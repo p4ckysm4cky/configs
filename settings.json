@@ -16,5 +16,9 @@
     "editor.smoothScrolling": true,
     "terminal.integrated.allowChords": false,
     "workbench.editor.wrapTabs": true,
-    "vim.highlightedyank.enable": true
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.sneak": true,
+    "vim.showMarksInGutter": true,
+    "vim.leader": " "
 }
