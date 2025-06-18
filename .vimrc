@@ -62,6 +62,9 @@ vnoremap 'r 'R
 " Custom binds
 let mapleader = " "
 nnoremap <Leader>r :set relativenumber!<CR>
+nnoremap <leader>h :noh<CR>
+nnoremap <leader>m :delm!<CR>
+nnoremap <leader>M :delm A-Z<CR>
 
 " Clipboard binds
 vnoremap Y "+y
