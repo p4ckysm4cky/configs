@@ -20,5 +20,119 @@
     "vim.hlsearch": true,
     "vim.sneak": true,
     "vim.showMarksInGutter": true,
-    "vim.leader": " "
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // Debug: Start debugging
+            "before": [
+                "<leader>",
+                "d",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+        {
+            // Debug: Continue
+            "before": [
+                "<leader>",
+                "d",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.debug.continue"
+            ]
+        },
+        {
+            // Debug: Stop Debugging
+            "before": [
+                "<leader>",
+                "d",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.debug.stop"
+            ]
+        },
+        {
+            // Debug: Toggle Breakpoint
+            "before": [
+                "<leader>",
+                "d",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint"
+            ]
+        },
+        {
+            // Debug: Step Over
+            "before": [
+                "<leader>",
+                "d",
+                "n"
+            ],
+            "commands": [
+                "workbench.action.debug.stepOver"
+            ]
+        },
+        {
+            // Debug: Step Into
+            "before": [
+                "<leader>",
+                "d",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.debug.stepInto"
+            ]
+        },
+        {
+            // Debug: Step Out
+            "before": [
+                "<leader>",
+                "d",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.debug.stepOut"
+            ]
+        },
+        {
+            // Debug: Restart Debugging
+            "before": [
+                "<leader>",
+                "d",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.debug.restart"
+            ]
+        },
+        {
+            // Debug: Toggle pause breakpoints
+            "before": [
+                "<leader>",
+                "d",
+                "t"
+            ],
+            "commands": [
+                "workbench.debug.viewlet.action.toggleBreakpointsActivatedAction"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // Debug: Evaluate selection
+            "before": [
+                "<leader>",
+                "d",
+                "e"
+            ],
+            "commands": [
+                "editor.debug.action.selectionToRepl"
+            ]
+        }
+    ]
 }
