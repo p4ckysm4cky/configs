@@ -23,7 +23,6 @@
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            // Debug: Start debugging
             "before": [
                 "<leader>",
                 "d",
@@ -34,7 +33,6 @@
             ]
         },
         {
-            // Debug: Continue
             "before": [
                 "<leader>",
                 "d",
@@ -45,7 +43,6 @@
             ]
         },
         {
-            // Debug: Stop Debugging
             "before": [
                 "<leader>",
                 "d",
@@ -56,7 +53,6 @@
             ]
         },
         {
-            // Debug: Toggle Breakpoint
             "before": [
                 "<leader>",
                 "d",
@@ -67,7 +63,6 @@
             ]
         },
         {
-            // Debug: Step Over
             "before": [
                 "<leader>",
                 "d",
@@ -78,7 +73,6 @@
             ]
         },
         {
-            // Debug: Step Into
             "before": [
                 "<leader>",
                 "d",
@@ -89,7 +83,6 @@
             ]
         },
         {
-            // Debug: Step Out
             "before": [
                 "<leader>",
                 "d",
@@ -100,7 +93,6 @@
             ]
         },
         {
-            // Debug: Restart Debugging
             "before": [
                 "<leader>",
                 "d",
@@ -111,7 +103,6 @@
             ]
         },
         {
-            // Debug: Toggle pause breakpoints
             "before": [
                 "<leader>",
                 "d",
@@ -124,7 +115,6 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            // Debug: Evaluate selection
             "before": [
                 "<leader>",
                 "d",
