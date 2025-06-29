@@ -111,6 +111,15 @@
             "commands": [
                 "workbench.debug.viewlet.action.toggleBreakpointsActivatedAction"
             ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
