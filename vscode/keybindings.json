@@ -32,5 +32,13 @@
     {
         "key": "ctrl+j",
         "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-workbench.actions.view.problems"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.toggleMaximizedPanel"
     }
 ]
