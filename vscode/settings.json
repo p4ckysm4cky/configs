@@ -120,6 +120,16 @@
             "commands": [
                 "editor.action.goToImplementation"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "m"
+            ],
+            "commands": [
+                "markdown.showPreview"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
