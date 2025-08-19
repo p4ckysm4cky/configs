@@ -114,6 +114,16 @@
         },
         {
             "before": [
+                "<leader>",
+                "d",
+                "d"
+            ],
+            "commands": [
+                "workbench.debug.viewlet.action.removeAllBreakpoints"
+            ]
+        },
+        {
+            "before": [
                 "g",
                 "i"
             ],
@@ -231,6 +241,16 @@
             ],
             "commands": [
                 "workbench.debug.viewlet.action.toggleBreakpointsActivatedAction"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "d"
+            ],
+            "commands": [
+                "workbench.debug.viewlet.action.removeAllBreakpoints"
             ]
         }
     ]
