@@ -6,3 +6,5 @@
 -   zoxide
 -   tmux
 -   ranger
+-   bat (batcat)
+-   tree
