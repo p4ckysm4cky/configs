@@ -140,6 +140,96 @@
             "commands": [
                 "markdown.showPreview"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "editor.toggleFold"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "u"
+            ],
+            "commands": [
+                "editor.unfoldAll"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "1"
+            ],
+            "commands": [
+                "editor.foldLevel1"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "2"
+            ],
+            "commands": [
+                "editor.foldLevel2"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "3"
+            ],
+            "commands": [
+                "editor.foldLevel3"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "4"
+            ],
+            "commands": [
+                "editor.foldLevel4"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "5"
+            ],
+            "commands": [
+                "editor.foldLevel5"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "6"
+            ],
+            "commands": [
+                "editor.foldLevel6"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "7"
+            ],
+            "commands": [
+                "editor.foldLevel7"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
