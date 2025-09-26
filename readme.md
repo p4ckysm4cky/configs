@@ -10,3 +10,4 @@
 -   tree
 -   rg (ripgrep)
 -   fd
+-   starship
