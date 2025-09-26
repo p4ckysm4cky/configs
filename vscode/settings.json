@@ -242,6 +242,46 @@
             "commands": [
                 "editor.foldLevel7"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.toggleMenuBar"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v",
+                "m"
+            ],
+            "commands": [
+                "editor.action.toggleMinimap"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v",
+                "b"
+            ],
+            "commands": [
+                "breadcrumbs.toggle"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
