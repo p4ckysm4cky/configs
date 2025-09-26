@@ -17,6 +17,7 @@
     "workbench.list.smoothScrolling": true,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
+    "git.blame.statusBarItem.enabled": true,
     "terminal.integrated.allowChords": false,
     "workbench.editor.wrapTabs": true,
     "vim.highlightedyank.enable": true,
