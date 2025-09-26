@@ -5,6 +5,7 @@
     "editor.smoothScrolling": true,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
+    "editor.stickyScroll.enabled": false,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabsOnSeparateRow": true,
