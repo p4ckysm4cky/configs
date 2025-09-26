@@ -15,6 +15,7 @@
     "terminal.integrated.allowChords": false,
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
+    "explorer.compactFolders": false,
     "zenMode.showTabs": "none",
     "zenMode.centerLayout": false,
     "vim.vimrc.enable": true,
