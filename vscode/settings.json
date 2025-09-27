@@ -14,7 +14,7 @@
     "debug.console.closeOnEnd": true,
     "terminal.integrated.allowChords": false,
     "zenMode.fullScreen": false,
-    "zenMode.hideLineNumbers": false,
+    "zenMode.hideLineNumbers": true,
     "explorer.compactFolders": false,
     "zenMode.showTabs": "none",
     "zenMode.centerLayout": false,
