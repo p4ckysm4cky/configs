@@ -146,6 +146,15 @@
         },
         {
             "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
                 "<leader>",
                 "e",
                 "m"
