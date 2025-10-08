@@ -14,9 +14,7 @@
     "debug.console.closeOnEnd": true,
     "terminal.integrated.allowChords": false,
     "zenMode.fullScreen": false,
-    "zenMode.hideLineNumbers": true,
     "explorer.compactFolders": false,
-    "zenMode.showTabs": "none",
     "zenMode.centerLayout": false,
     "vim.vimrc.enable": true,
     "vim.handleKeys": {
@@ -291,6 +289,36 @@
             ],
             "commands": [
                 "breadcrumbs.toggle"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.pinEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "u"
+            ],
+            "commands": [
+                "workbench.action.pinEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.closeAllEditors"
             ]
         }
     ],
