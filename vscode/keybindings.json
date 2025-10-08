@@ -40,5 +40,20 @@
     {
         "key": "ctrl+shift+m",
         "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletFocus"
     }
 ]
