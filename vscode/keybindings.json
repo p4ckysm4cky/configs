@@ -52,7 +52,7 @@
         "when": "explorerViewletFocus"
     },
     {
-        "key": "ctrl+c",
+        "key": "ctrl+d",
         "command": "workbench.files.action.collapseExplorerFolders",
         "when": "explorerViewletFocus"
     }

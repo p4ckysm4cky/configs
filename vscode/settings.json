@@ -308,7 +308,7 @@
                 "u"
             ],
             "commands": [
-                "workbench.action.pinEditor"
+                "workbench.action.unpinEditor"
             ]
         },
         {
