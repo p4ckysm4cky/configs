@@ -12,6 +12,7 @@
     "workbench.list.smoothScrolling": true,
     "git.blame.statusBarItem.enabled": true,
     "debug.console.closeOnEnd": true,
+    "debug.inlineValues": "on",
     "terminal.integrated.allowChords": false,
     "zenMode.fullScreen": false,
     "explorer.compactFolders": false,
@@ -131,6 +132,16 @@
             ],
             "commands": [
                 "workbench.debug.viewlet.action.removeAllBreakpoints"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "a"
+            ],
+            "commands": [
+                "editor.debug.action.runToCursor"
             ]
         },
         {
@@ -431,6 +442,16 @@
             ],
             "commands": [
                 "workbench.debug.viewlet.action.removeAllBreakpoints"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "a"
+            ],
+            "commands": [
+                "editor.debug.action.runToCursor"
             ]
         }
     ]
