@@ -16,13 +16,6 @@
         "theme": "ANSI"
     },
     "tools": {
-        "core": [
-            "LSTool",
-            "ReadFileTool",
-            "GrepTool",
-            "GlobTool",
-            "ReadManyFilesTool"
-        ],
         "shell": {
             "showColor": true
         }
