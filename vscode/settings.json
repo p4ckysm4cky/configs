@@ -17,6 +17,9 @@
     "zenMode.fullScreen": false,
     "explorer.compactFolders": false,
     "zenMode.centerLayout": false,
+    "workbench.activityBar.location": "top",
+    "window.menuBarVisibility": "compact",
+    "chat.fontSize": 15,
     "vim.vimrc.enable": true,
     "vim.handleKeys": {
         "<C-d>": true,
