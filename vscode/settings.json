@@ -36,6 +36,7 @@
     "vim.sneak": true,
     "vim.showMarksInGutter": true,
     "vim.leader": " ",
+    "vim.easymotion": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -457,5 +458,37 @@
                 "editor.debug.action.runToCursor"
             ]
         }
-    ]
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "b"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "<leader>",
+                "b",
+                "d",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "e"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "<leader>",
+                "b",
+                "d",
+                "e"
+            ]
+        }
+    ],
 }
