@@ -10,7 +10,6 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabsOnSeparateRow": true,
     "workbench.list.smoothScrolling": true,
-    "git.blame.statusBarItem.enabled": true,
     "debug.console.closeOnEnd": true,
     "debug.inlineValues": "on",
     "terminal.integrated.allowChords": false,
@@ -20,6 +19,14 @@
     "workbench.activityBar.location": "top",
     "window.menuBarVisibility": "compact",
     "chat.fontSize": 15,
+    // ================================================
+    // GIT SETTINGS
+    // ================================================
+    "git.blame.statusBarItem.enabled": true,
+    "git.useEditorAsCommitInput": false,
+    // ================================================
+    // VIM SETTINGS 
+    // ================================================
     "vim.vimrc.enable": true,
     "vim.handleKeys": {
         "<C-d>": true,
@@ -37,8 +44,10 @@
     "vim.showMarksInGutter": true,
     "vim.leader": " ",
     "vim.easymotion": true,
-    "git.useEditorAsCommitInput": false,
     "vim.normalModeKeyBindingsNonRecursive": [
+        // ================================================
+        // DEBUGGING BINDINGS 
+        // ================================================
         {
             "before": [
                 "<leader>",
@@ -149,6 +158,9 @@
                 "editor.debug.action.runToCursor"
             ]
         },
+        // ================================================
+        // NAVIGATION BINDINGS 
+        // ================================================
         {
             "before": [
                 "g",
@@ -177,6 +189,9 @@
                 "markdown.showPreview"
             ]
         },
+        // ================================================
+        // FOLDING BINDINGS 
+        // ================================================
         {
             "before": [
                 "<leader>",
@@ -267,6 +282,9 @@
                 "editor.foldLevel7"
             ]
         },
+        // ================================================
+        // VISUAL CUSTOMISATION BINDINGS 
+        // ================================================
         {
             "before": [
                 "<leader>",
@@ -307,6 +325,9 @@
                 "breadcrumbs.toggle"
             ]
         },
+        // ================================================
+        // TAB BINDINGS 
+        // ================================================
         {
             "before": [
                 "<leader>",
@@ -337,6 +358,9 @@
                 "workbench.action.closeAllEditors"
             ]
         },
+        // ================================================
+        // GIT BINDINGS 
+        // ================================================
         {
             "before": [
                 "<leader>",
@@ -468,6 +492,9 @@
             ]
         }
     ],
+    // ================================================
+    // DEBUGGING BINDINGS 
+    // ================================================
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -590,6 +617,9 @@
             ]
         }
     ],
+    // ================================================
+    // VIM EASYMOTION BINDINGS 
+    // ================================================
     "vim.normalModeKeyBindings": [
         {
             "before": [

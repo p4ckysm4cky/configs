@@ -1,4 +1,7 @@
 [
+    // ================================================
+    // NAVIGATION BINDINGS 
+    // ================================================
     {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
@@ -41,6 +44,9 @@
         "key": "ctrl+shift+m",
         "command": "workbench.action.toggleMaximizedPanel"
     },
+    // ================================================
+    // FILE EXPLORER BINDINGS 
+    // ================================================
     {
         "key": "ctrl+n",
         "command": "explorer.newFile",
