@@ -37,6 +37,7 @@
     "vim.showMarksInGutter": true,
     "vim.leader": " ",
     "vim.easymotion": true,
+    "git.useEditorAsCommitInput": false,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -335,6 +336,136 @@
             "commands": [
                 "workbench.action.closeAllEditors"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "a"
+            ],
+            "commands": [
+                "git.stageAll"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "r"
+            ],
+            "commands": [
+                "git.unstageAll"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "m"
+            ],
+            "commands": [
+                "git.commit"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "f"
+            ],
+            "commands": [
+                "git.fetch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "p"
+            ],
+            "commands": [
+                "git.push"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "P"
+            ],
+            "commands": [
+                "git.pull"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "b"
+            ],
+            "commands": [
+                "git.checkout"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "c"
+            ],
+            "commands": [
+                "git.cleanAll"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "s"
+            ],
+            "commands": [
+                "workbench.scm.focus"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "l"
+            ],
+            "commands": [
+                "workbench.scm.history.focus"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "z"
+            ],
+            "commands": [
+                "git.stashIncludeUntracked"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "Z"
+            ],
+            "commands": [
+                "git.stashApply"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "d"
+            ],
+            "commands": [
+                "git.openChange"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -490,5 +621,5 @@
                 "e"
             ]
         }
-    ],
+    ]
 }
