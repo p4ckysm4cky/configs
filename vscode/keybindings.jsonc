@@ -71,6 +71,10 @@
         "key": "alt+j",
         "command": "workbench.action.focusNextGroup"
     },
+    {
+        "key": "alt+z",
+        "command": "workbench.action.toggleEditorWidths"
+    },
     // ================================================
     // OPEN EDITOR BINDINGS 
     // ================================================

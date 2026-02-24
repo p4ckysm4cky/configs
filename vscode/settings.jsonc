@@ -33,7 +33,7 @@
     // ZEN MODE SETTINGS
     // ================================================
     "zenMode.fullScreen": true,
-    "zenMode.showTabs": "single",
+    "zenMode.showTabs": "multiple",
     "zenMode.centerLayout": false,
     "zenMode.hideLineNumbers": false,
     // ================================================
