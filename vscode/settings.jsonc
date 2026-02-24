@@ -1,4 +1,14 @@
 {
+    // ================================================
+    // UNCATEGORISED SETTINGS
+    // ================================================
+    "debug.console.closeOnEnd": true,
+    "debug.inlineValues": "on",
+    "terminal.integrated.allowChords": false,
+    "chat.fontSize": 15,
+    // ================================================
+    // EDITOR SETTINGS
+    // ================================================
     "editor.formatOnSave": true,
     "editor.cursorSurroundingLines": 8,
     "editor.wordWrap": "on",
@@ -6,24 +16,37 @@
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.stickyScroll.enabled": false,
+    // ================================================
+    // EDITOR TAB SETTINGS
+    // ================================================
     "workbench.editor.wrapTabs": true,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.pinnedTabsOnSeparateRow": true,
     "workbench.list.smoothScrolling": true,
-    "debug.console.closeOnEnd": true,
-    "debug.inlineValues": "on",
-    "terminal.integrated.allowChords": false,
-    "zenMode.fullScreen": false,
+    // ================================================
+    // VIEW SETTINGS
+    // ================================================
     "explorer.compactFolders": false,
-    "zenMode.centerLayout": false,
     "workbench.activityBar.location": "top",
     "window.menuBarVisibility": "compact",
-    "chat.fontSize": 15,
+    // ================================================
+    // ZEN MODE SETTINGS
+    // ================================================
+    "zenMode.fullScreen": true,
+    "zenMode.showTabs": "single",
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
     // ================================================
     // GIT SETTINGS
     // ================================================
     "git.blame.statusBarItem.enabled": true,
     "git.useEditorAsCommitInput": false,
+    // ================================================
+    // LANGUAGE SPECIFIC SETTINGS
+    // ================================================
+    "[markdown]": {
+        "editor.tabSize": 2
+    },
     // ================================================
     // VIM SETTINGS 
     // ================================================
