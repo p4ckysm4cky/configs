@@ -41,6 +41,7 @@
     // ================================================
     "git.blame.statusBarItem.enabled": true,
     "git.useEditorAsCommitInput": false,
+    "git.autofetch": true,
     // ================================================
     // LANGUAGE SPECIFIC SETTINGS
     // ================================================

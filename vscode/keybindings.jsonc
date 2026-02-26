@@ -56,9 +56,17 @@
         "command": "workbench.action.previousEditor"
     },
     {
-        "key": "alt+p",
+        "key": "alt+t p",
         "command": "workbench.action.quickOpen",
         "args": "edt "
+    },
+    {
+        "key": "alt+t c",
+        "command": "workbench.action.closeEditorsInGroup"
+    },
+    {
+        "key": "alt+t shift+c",
+        "command": "workbench.action.closeAllEditors"
     },
     // ================================================
     // PANE NAVIGATION BINDINGS 
@@ -76,12 +84,31 @@
         "command": "workbench.action.toggleEditorWidths"
     },
     // ================================================
-    // OPEN EDITOR BINDINGS 
+    // OPEN EDITOR BINDINGS
     // ================================================
     {
-        "key": "alt+t",
+        "key": "alt+o t",
         "command": "workbench.action.createTerminalEditor",
         "when": "terminalProcessSupported"
+    },
+    {
+        "key": "alt+o f",
+        "command": "search.action.openEditor"
+    },
+    {
+        "key": "alt+o c",
+        "command": "workbench.action.openChat",
+        "when": "chatIsEnabled"
+    },
+    {
+        "key": "alt+o shift+c",
+        "command": "workbench.action.chat.openInEditor",
+        "when": "chatIsEnabled"
+    },
+    {
+        "key": "alt+o d",
+        "command": "git.viewChanges",
+        "when": "!operationInProgress"
     },
     // ================================================
     // FILE EXPLORER BINDINGS 
