@@ -28,14 +28,14 @@ If `target_branch` is not provided, default to `origin/main` or `origin/master`.
 
 2. Confirm current branch and target branch.
     - Get current branch: `git rev-parse --abbrev-ref HEAD`
-    - Ensure target branch exists: `git -P branch -a`
+    - Ensure target branch exists: `git --no-pager branch -a`
     - Verify the resolved `target_branch` appears in the output.
     - **If the target branch is not found: stop and report** — do not proceed. Ask the user to confirm the correct target branch name.
 
 3. Gather change data.
-    - File summary: `git -P diff --stat <target_branch>...HEAD`
-    - Commit list: `git -P log --oneline <target_branch>..HEAD`
-    - For each changed file, get its diff: `git -P diff <target_branch>...HEAD -- <file>`
+    - File summary: `git --no-pager diff --stat <target_branch>...HEAD`
+    - Commit list: `git --no-pager log --oneline <target_branch>..HEAD`
+    - For each changed file, get its diff: `git --no-pager diff <target_branch>...HEAD -- <file>`
 
 4. Summarise each file.
     - Read the diff for every changed file.
@@ -100,12 +100,12 @@ git fetch
 
 # 2. Confirm current branch and target branch
 git rev-parse --abbrev-ref HEAD
-git -P branch -a
+git --no-pager branch -a
 
 # 3. Gather change data
-git -P diff --stat origin/main...HEAD
-git -P log --oneline origin/main..HEAD
+git --no-pager diff --stat origin/main...HEAD
+git --no-pager log --oneline origin/main..HEAD
 
 # 4. Per-file diffs
-git -P diff origin/main...HEAD -- path/to/file.ts
+git --no-pager diff origin/main...HEAD -- path/to/file.ts
 ```
