@@ -27,14 +27,18 @@ If `target_branch` is not provided, default to `origin/main` or `origin/master`.
 
 2. Confirm current branch and target branch.
     - Get current branch: `git rev-parse --abbrev-ref HEAD`
-    - Ensure target branch exists: `git -P branch -a`
+    - Ensure target branch exists: `git --no-pager branch -a`
     - Verify the resolved `target_branch` appears in the output.
     - **If the target branch is not found: stop and report** — do not proceed with the review. Ask the user to confirm the correct target branch name.
 
 3. Compute review diff.
-    - File summary: `git -P diff --stat <target_branch>...HEAD`
-    - Full patch: `git -P diff <target_branch>...HEAD`
-    - Commit list: `git -P log --oneline <target_branch>..HEAD`
+    - File summary: `git --no-pager diff --stat <target_branch>...HEAD`
+    - Commit list: `git --no-pager log --oneline <target_branch>..HEAD`
+    - Changed file list: `git --no-pager diff --name-only <target_branch>...HEAD`
+    - **Do NOT run a single `git diff` for the entire branch at once.** A monolithic diff can silently exceed terminal capture buffer, causing files at the end to be skipped without warning.
+    - Instead, iterate through each file in the changed file list and diff it individually:
+      `git --no-pager diff <target_branch>...HEAD -- <file>`
+    - Track which files have been reviewed. After processing all files, verify the reviewed count matches the total from `--name-only` before writing findings.
 
 4. Prioritise high-risk areas first.
     - Security-sensitive logic
@@ -75,6 +79,7 @@ Use this exact structure:
 ## Review guardrails
 
 - **Stop immediately if the target branch cannot be found.** Report the missing branch and ask the user to provide a valid target before proceeding.
+- **Never run a single `git diff` for the whole branch.** Always diff file-by-file and verify every file from `--name-only` has been reviewed before producing findings.
 - Do not invent issues without evidence in the diff.
 - Prefer fewer, high-signal findings over many low-value comments.
 - If unsure, mark as "needs confirmation" and explain why.
@@ -88,10 +93,14 @@ git fetch
 
 # 2. Confirm current branch and target branch
 git rev-parse --abbrev-ref HEAD
-git -P branch -a
+git --no-pager branch -a
 
-# 3. Compute review diff
-git -P diff --stat origin/main...HEAD
-git -P log --oneline origin/main..HEAD
-git -P diff origin/main...HEAD
+# 3. Compute review diff — file-by-file to avoid context overflow
+git --no-pager diff --stat origin/main...HEAD
+git --no-pager log --oneline origin/main..HEAD
+git --no-pager diff --name-only origin/main...HEAD   # get the full file list first
+
+# Then for EACH file in the list:
+git --no-pager diff origin/main...HEAD -- path/to/file.ts
+# Repeat for every file before writing any findings
 ```
