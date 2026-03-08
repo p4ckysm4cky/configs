@@ -5,7 +5,16 @@
     "debug.console.closeOnEnd": true,
     "debug.inlineValues": "on",
     "terminal.integrated.allowChords": false,
+    // ================================================
+    // COPILOT SETTINGS
+    // ===============================================
     "chat.fontSize": 15,
+    "chat.tools.terminal.autoApprove": {
+        // Custom allowed commands START 
+        "/^git(\\s+(-C\\s+\\S+|--no-pager|-P))*\\s+fetch(\\s+(--all|--dry-run|--verbose|-v|origin))*$/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager|-P))*\\s+rev-parse\\b/": true
+        // Custom allowed commands END 
+    },
     // ================================================
     // EDITOR SETTINGS
     // ================================================
