@@ -44,6 +44,16 @@
         "key": "ctrl+shift+m",
         "command": "workbench.action.toggleMaximizedPanel"
     },
+    {
+        "key": "alt+m",
+        "command": "markdown.reopenAsPreview",
+        "when": "activeEditor == workbench.editors.files.textFileEditor && resourceLangId == 'markdown'"
+    },
+    {
+        "key": "alt+m",
+        "command": "markdown.reopenAsSource",
+        "when": "activeCustomEditorId == 'vscode.markdown.preview.editor'"
+    },
     // ================================================
     // TAB BINDINGS 
     // ================================================
