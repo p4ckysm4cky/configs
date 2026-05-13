@@ -47,7 +47,7 @@
     {
         "key": "alt+m",
         "command": "markdown.reopenAsPreview",
-        "when": "activeEditor == workbench.editors.files.textFileEditor && resourceLangId == 'markdown'"
+        "when": "activeEditor == workbench.editors.files.textFileEditor"
     },
     {
         "key": "alt+m",
