@@ -12,6 +12,7 @@ bwcwd() {
         --tmpfs /tmp \
         --proc /proc \
         --dev /dev \
+        --share-net \
         "${@:-/bin/sh}"
 }
 
