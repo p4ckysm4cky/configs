@@ -16,6 +16,22 @@ bwcwd() {
         "${@:-/bin/sh}"
 }
 
+bwcwdagent() {
+    bwrap \
+        --ro-bind / / \
+        --bind-try "$HOME/.config/opencode" "$HOME/.config/opencode" \
+        --bind-try "$HOME/.local/share/opencode" "$HOME/.local/share/opencode" \
+        --bind-try "$HOME/.cache/opencode" "$HOME/.cache/opencode" \
+        --bind-try "$HOME/.pi/agent" "$HOME/.pi/agent" \
+        --bind "$PWD" "$PWD" \
+        --chdir "$PWD" \
+        --tmpfs /tmp \
+        --proc /proc \
+        --dev /dev \
+        --share-net \
+        "${@:-/bin/sh}"
+}
+
 # Setup starship
 eval "$(starship init bash)"
 
