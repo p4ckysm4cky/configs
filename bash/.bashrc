@@ -32,6 +32,10 @@ bwcwdagent() {
         "${@:-/bin/sh}"
 }
 
+pi() {
+    bwcwdagent pi "$@"
+}
+
 # Setup starship
 eval "$(starship init bash)"
 
