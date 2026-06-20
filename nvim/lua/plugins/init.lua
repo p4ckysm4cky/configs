@@ -73,6 +73,22 @@ return {
     end,
   },
   {
+    "nvim-mini/mini.comment",
+    version = false,
+    event = "VeryLazy",
+    config = function()
+      require("mini.comment").setup()
+
+      vim.keymap.set("n", "<C-_>", function()
+        return MiniComment.operator() .. "_"
+      end, { expr = true, desc = "Toggle comment line" })
+
+      vim.keymap.set("x", "<C-_>", function()
+        return MiniComment.operator()
+      end, { expr = true, desc = "Toggle comment selection" })
+    end,
+  },
+  {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = {
@@ -131,5 +147,10 @@ return {
         },
       }
     end,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = {},
   },
 }
