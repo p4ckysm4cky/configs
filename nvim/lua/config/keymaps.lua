@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>m", "<cmd>delmarks!<CR>")
 vim.keymap.set("n", "<leader>M", "<cmd>delmarks A-Z<CR>")
 
 -- Clipboard binds
-vim.keymap.set("n", "Y", '+"+y')
-vim.keymap.set("v", "Y", '+"+y')
-vim.keymap.set("v", "P", '+"+p')
-vim.keymap.set("n", "P", '+"+p')
+vim.keymap.set("n", "Y", '"+yy')
+vim.keymap.set("v", "Y", '"+y')
+vim.keymap.set("v", "P", '"+p')
+vim.keymap.set("n", "P", '"+p')

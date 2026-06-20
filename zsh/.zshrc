@@ -14,6 +14,10 @@ compinit
 # PATH
 export PATH="$HOME/.local/bin:$HOME/.fzf/bin:$PATH"
 
+# Editor
+export EDITOR=nvim
+export VISUAL=nvim
+
 # lesspipe
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
