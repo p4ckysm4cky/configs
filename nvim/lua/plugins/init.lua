@@ -1,3 +1,68 @@
+local function flash_two_stage_word_jump(pattern)
+  local flash = require("flash")
+
+  local function format(opts)
+    return {
+      { opts.match.label1 or "", "FlashMatch" },
+      { opts.match.label2 or opts.match.label or "", "FlashLabel" },
+    }
+  end
+
+  flash.jump({
+    pattern = pattern,
+    search = {
+      mode = "search",
+      multi_window = false,
+      max_length = 0,
+    },
+    label = {
+      after = false,
+      before = { 0, 0 },
+      format = format,
+    },
+    highlight = {
+      backdrop = true,
+      matches = false,
+    },
+    action = function(match, state)
+      state:hide()
+      flash.jump({
+        search = {
+          max_length = 0,
+        },
+        label = {
+          after = false,
+          before = { 0, 0 },
+          format = format,
+        },
+        highlight = {
+          backdrop = true,
+          matches = false,
+        },
+        matcher = function(win)
+          return vim.tbl_filter(function(m)
+            return m.label == match.label and m.win == win
+          end, state.results)
+        end,
+        labeler = function(matches)
+          for _, m in ipairs(matches) do
+            m.label = m.label2
+          end
+        end,
+      })
+    end,
+    labeler = function(matches, state)
+      local labels = state:labels()
+
+      for i, match in ipairs(matches) do
+        match.label1 = labels[math.floor((i - 1) / #labels) + 1]
+        match.label2 = labels[(i - 1) % #labels + 1]
+        match.label = match.label1
+      end
+    end,
+  })
+end
+
 return {
   {
     "Mofiqul/dracula.nvim",
@@ -10,27 +75,18 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {},
+    opts = {
+      label = {
+        uppercase = false,
+        distance = true,
+      },
+    },
     keys = {
       {
         "<leader>eb",
         mode = { "n", "x", "o" },
         function()
-          require("flash").jump({
-            pattern = [[\<\k]],
-            search = {
-              mode = "search",
-              multi_window = false,
-            },
-            label = {
-              after = { 0, 0 },
-              before = false,
-            },
-            highlight = {
-              backdrop = true,
-              matches = false,
-            },
-          })
+          flash_two_stage_word_jump([[\<\k]])
         end,
         desc = "Flash word begin",
       },
@@ -38,21 +94,7 @@ return {
         "<leader>ee",
         mode = { "n", "x", "o" },
         function()
-          require("flash").jump({
-            pattern = [[\k\>]],
-            search = {
-              mode = "search",
-              multi_window = false,
-            },
-            label = {
-              after = { 0, 0 },
-              before = false,
-            },
-            highlight = {
-              backdrop = true,
-              matches = false,
-            },
-          })
+          flash_two_stage_word_jump([[\k\>]])
         end,
         desc = "Flash word end",
       },
