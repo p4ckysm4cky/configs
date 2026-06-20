@@ -1,7 +1,8 @@
 [init]
 	defaultBranch = main
 [core]
-	editor = vim
+	editor = nvim
+	pager = delta
 [alias]
 	lg = log --pretty=format:'%C(bold red)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(yellow)%ad%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=human --decorate=full
 	cleanup = !git reset --hard && git clean -df
@@ -17,3 +18,17 @@
 	restoreb = "!git restore ./ --source$(git branch | grep -v \"^\\*\" | fzf)"
 	st = status -s --branch
 	aa = add -A
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	line-numbers = true
+    side-by-side = true
+    syntax-theme = Dracula
+[merge]
+	conflictStyle = zdiff3
+[diff]
+	algorithm = histogram
+	colorMoved = default
+

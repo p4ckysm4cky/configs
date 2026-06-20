@@ -13,3 +13,4 @@
 - fd
 - starship
 - bubblewrap
+- delta
