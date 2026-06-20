@@ -3,6 +3,7 @@
 - nvm
 - tldr
 - fzf
+- fzf-tab
 - zoxide
 - tmux
 - ranger

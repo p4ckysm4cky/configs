@@ -43,29 +43,16 @@ if command -v fzf >/dev/null 2>&1; then
     source <(fzf --zsh)
 fi
 
+# fzf-tab previews
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color=always $realpath'
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'bat --style=numbers --color=always $realpath 2>/dev/null || batcat --style=numbers --color=always $realpath 2>/dev/null || ls --color=always $realpath'
+
+# fzf-tab
+if [ -f "$HOME/.zsh/fzf-tab/fzf-tab.plugin.zsh" ]; then
+    source "$HOME/.zsh/fzf-tab/fzf-tab.plugin.zsh"
+fi
+
 # Functions
-cdf() {
-    local dir
-    dir=$(find . -maxdepth 1 -mindepth 1 -type d | fzf --preview 'tree -L 3 -C {} | head -300') &&
-        cd "$dir"
-}
-
-cdff() {
-    local dir
-    dir=$(find . -mindepth 1 -type d | fzf --preview 'tree -L 3 -C {} | head -300') &&
-        cd "$dir"
-}
-
-vimf() {
-    local file
-    local bat_cmd
-
-    bat_cmd=$(command -v bat || command -v batcat) || return 1
-
-    file=$(fzf --preview "$bat_cmd --style=numbers --color=always {} | head -500") &&
-        vim "$file"
-}
-
 bwcwd() {
     bwrap \
         --ro-bind / / \
@@ -98,8 +85,8 @@ pi() {
     bwcwdagent pi "$@"
 }
 
-# Starship prompt
-eval "$(starship init zsh)"
-
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Starship prompt
+eval "$(starship init zsh)"
