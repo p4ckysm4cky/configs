@@ -7,6 +7,8 @@ vim.opt.laststatus = 2
 vim.opt.visualbell = true
 vim.opt.wrap = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 -- Searching
 vim.opt.incsearch = true

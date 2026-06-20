@@ -149,6 +149,16 @@ return {
     end,
   },
   {
+    "folke/twilight.nvim",
+    cmd = "Twilight",
+    keys = {
+      { "<leader>vt", "<cmd>Twilight<cr>", desc = "Toggle Twilight" },
+    },
+    opts = {
+      treesitter = false,
+    },
+  },
+  {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = {},
