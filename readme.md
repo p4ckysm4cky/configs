@@ -14,3 +14,19 @@
 - starship
 - bubblewrap
 - delta
+
+## Stow
+
+Use `stow --no-folding -t ~ <package>...`.
+
+Stow-compatible folders:
+
+- `bash`
+- `git`
+- `jetbrains`
+- `nvim`
+- `ranger`
+- `starship`
+- `tmux`
+- `vim`
+- `zsh`
