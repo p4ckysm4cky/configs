@@ -18,7 +18,7 @@
 
 ## Stow
 
-Use `stow --no-folding -t ~ <package>...`.
+Use `stow --no-folding -t ~ <package>`
 
 Stow-compatible folders:
 
