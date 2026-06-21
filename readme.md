@@ -12,6 +12,7 @@
 - rg (ripgrep)
 - fd
 - starship
+- hunk
 - bubblewrap
 - delta
 
@@ -23,6 +24,7 @@ Stow-compatible folders:
 
 - `bash`
 - `git`
+- `hunk`
 - `jetbrains`
 - `nvim`
 - `ranger`
