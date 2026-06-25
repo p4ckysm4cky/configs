@@ -125,6 +125,16 @@ return {
     keys = {
       { "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Find files" },
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+      {
+        "<leader>fa",
+        function()
+          require("telescope.builtin").find_files({
+            hidden = true,
+            no_ignore = true,
+          })
+        end,
+        desc = "Find all files",
+      },
       { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
