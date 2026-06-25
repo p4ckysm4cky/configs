@@ -20,6 +20,8 @@
 
 Use `stow --no-folding -t ~ <package>`
 
+To restow a package after changes, use `stow -r --no-folding -t ~ <package>`
+
 Stow-compatible folders:
 
 - `bash`
