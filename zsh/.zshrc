@@ -10,6 +10,9 @@ setopt SHARE_HISTORY
 # Completion
 autoload -Uz compinit
 compinit
+bindkey -e
+bindkey -M emacs '^[[1;3D' backward-word
+bindkey -M emacs '^[[1;3C' forward-word
 
 # PATH
 export PATH="$HOME/.local/bin:$HOME/.fzf/bin:$PATH"
