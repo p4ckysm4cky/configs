@@ -60,19 +60,7 @@ if [ -f "$HOME/.zsh/fzf-tab/fzf-tab.plugin.zsh" ]; then
 fi
 
 # Functions
-bwcwd() {
-    bwrap \
-        --ro-bind / / \
-        --bind "$PWD" "$PWD" \
-        --chdir "$PWD" \
-        --tmpfs /tmp \
-        --proc /proc \
-        --dev /dev \
-        --share-net \
-        "${@:-/bin/sh}"
-}
-
-bwcwdagent() {
+bwdevagent() {
     bwrap \
         --ro-bind / / \
         --bind-try "$HOME/.config/opencode" "$HOME/.config/opencode" \
@@ -89,7 +77,7 @@ bwcwdagent() {
 }
 
 pi() {
-    bwcwdagent pi "$@"
+    bwdevagent pi "$@"
 }
 
 # Zoxide
