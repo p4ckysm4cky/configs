@@ -58,10 +58,11 @@ zstyle ':fzf-tab:complete:*:*' fzf-preview 'bat --style=numbers --color=always $
 if [ -f "$HOME/.zsh/fzf-tab/fzf-tab.plugin.zsh" ]; then
     source "$HOME/.zsh/fzf-tab/fzf-tab.plugin.zsh"
 fi
-
 # Functions
-bwdevagent() {
+# Permissive development agent sandbox
+bwagentdev() {
     bwrap \
+        --unshare-all \
         --ro-bind / / \
         --bind-try "$HOME/.config/opencode" "$HOME/.config/opencode" \
         --bind-try "$HOME/.local/share/opencode" "$HOME/.local/share/opencode" \
@@ -73,11 +74,59 @@ bwdevagent() {
         --proc /proc \
         --dev /dev \
         --share-net \
+        --die-with-parent \
         "${@:-/bin/sh}"
 }
 
 pi() {
-    bwdevagent pi "$@"
+    bwagentdev pi "$@"
+}
+
+# Shared guarded sandbox policy with network access and minimal host mounts.
+_bwguard() {
+    bwrap \
+        --unshare-all \
+        --share-net \
+        --unshare-user \
+        --disable-userns \
+        --clearenv \
+        --setenv HOME "$HOME" \
+        --setenv PATH /usr/bin \
+        --setenv TERM "${TERM:-xterm-256color}" \
+        --setenv LANG "${LANG:-C.UTF-8}" \
+        --setenv XDG_CACHE_HOME /tmp/cache \
+        --ro-bind /usr /usr \
+        --ro-bind /lib /lib \
+        --ro-bind /lib64 /lib64 \
+        --ro-bind /etc/ssl/certs /etc/ssl/certs \
+        --ro-bind /etc/resolv.conf /etc/resolv.conf \
+        --bind "$PWD" "$PWD" \
+        --chdir "$PWD" \
+        --tmpfs /tmp \
+        --proc /proc \
+        --dev /dev \
+        --new-session \
+        --die-with-parent \
+        "${@:-/usr/bin/sh}"
+}
+
+bwguard() {
+    _bwguard -- "${@:-/usr/bin/sh}"
+}
+
+piguard() {
+    if [[ -z ${NVM_BIN:-} ]]; then
+        print -u2 'piguard: NVM_BIN is not set'
+        return 1
+    fi
+
+    local node_root=${NVM_BIN:h}
+
+    _bwguard \
+        --ro-bind "$node_root" "$node_root" \
+        --bind "$HOME/.pi/agent" "$HOME/.pi/agent" \
+        --setenv PATH "$NVM_BIN:/usr/bin" \
+        -- pi "$@"
 }
 
 # Zoxide
