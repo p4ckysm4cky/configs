@@ -93,6 +93,7 @@ _bwguard() {
         --setenv HOME "$HOME" \
         --setenv PATH /usr/bin \
         --setenv TERM "${TERM:-xterm-256color}" \
+        --setenv COLORTERM truecolor \
         --setenv LANG "${LANG:-C.UTF-8}" \
         --setenv XDG_CACHE_HOME /tmp/cache \
         --ro-bind /usr /usr \
