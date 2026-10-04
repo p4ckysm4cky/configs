@@ -130,6 +130,24 @@ piguard() {
         -- pi "$@"
 }
 
+opencodeguard() {
+    if [[ -z ${NVM_BIN:-} ]]; then
+        print -u2 'opencodeguard: NVM_BIN is not set'
+        return 1
+    fi
+
+    local node_root=${NVM_BIN:h}
+
+    _bwguard \
+        --ro-bind "$node_root" "$node_root" \
+        --bind "$HOME/.config/opencode" "$HOME/.config/opencode" \
+        --bind "$HOME/.local/share/opencode" "$HOME/.local/share/opencode" \
+        --bind "$HOME/.local/state/opencode" "$HOME/.local/state/opencode" \
+        --bind "$HOME/.cache/opencode" "$HOME/.cache/opencode" \
+        --setenv PATH "$NVM_BIN:/usr/bin" \
+        -- opencode "$@"
+}
+
 # Zoxide
 eval "$(zoxide init zsh)"
 
