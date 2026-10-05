@@ -130,6 +130,22 @@ piguard() {
         -- pi "$@"
 }
 
+codexguard() {
+    if [[ -z ${NVM_BIN:-} ]]; then
+        print -u2 'codexguard: NVM_BIN is not set'
+        return 1
+    fi
+
+    local node_root=${NVM_BIN:h}
+
+    _bwguard \
+        --ro-bind "$node_root" "$node_root" \
+        --bind "$HOME/.codex" "$HOME/.codex" \
+        --setenv PATH "$NVM_BIN:/usr/bin" \
+        -- codex --no-daemon --sandbox danger-full-access --ask-for-approval on-request \
+        -c 'approvals_reviewer="auto_review"' "$@"
+}
+
 opencodeguard() {
     if [[ -z ${NVM_BIN:-} ]]; then
         print -u2 'opencodeguard: NVM_BIN is not set'
