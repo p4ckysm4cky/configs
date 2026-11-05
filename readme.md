@@ -7,16 +7,18 @@
 - fzf-tab
 - zoxide
 - tmux
-- ranger
 - yazi
+- Neovim (`nvim`)
+- Vim
 - bat (batcat)
 - tree
 - rg (ripgrep)
 - fd
 - starship
-- hunk
 - bubblewrap
 - delta
+- Git
+- GNU Stow
 
 ## Stow
 
@@ -28,12 +30,9 @@ To unstow a package, use `stow -D -t ~ <package>`
 
 Stow-compatible folders:
 
-- `bash`
 - `git`
-- `hunk`
 - `jetbrains`
 - `nvim`
-- `ranger`
 - `starship`
 - `tmux`
 - `vim`
