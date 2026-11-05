@@ -1,5 +1,17 @@
 local function flash_two_stage_word_jump(pattern)
-  local flash = require("flash")
+  local function pick_label(opts)
+    local state = require("flash.state").new(opts)
+    vim.cmd.redraw()
+    local char = state:get_char()
+    state:hide()
+    if char and state:find({ label = char }) then
+      state:jump(char)
+    else
+      state:restore()
+      -- Consume invalid input and cancel any pending operator too.
+      vim.api.nvim_input("<Esc>")
+    end
+  end
 
   local function format(opts)
     return {
@@ -8,7 +20,7 @@ local function flash_two_stage_word_jump(pattern)
     }
   end
 
-  flash.jump({
+  pick_label({
     pattern = pattern,
     search = {
       mode = "search",
@@ -26,7 +38,7 @@ local function flash_two_stage_word_jump(pattern)
     },
     action = function(match, state)
       state:hide()
-      flash.jump({
+      pick_label({
         search = {
           max_length = 0,
         },
