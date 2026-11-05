@@ -1,3 +1,4 @@
+-- ========== Flash Helpers ==========
 local function flash_two_stage_word_jump(pattern)
   local function pick_label(opts)
     local state = require("flash.state").new(opts)
@@ -76,6 +77,7 @@ local function flash_two_stage_word_jump(pattern)
 end
 
 return {
+  -- ========== Dracula ==========
   {
     "Mofiqul/dracula.nvim",
     lazy = false,
@@ -84,6 +86,7 @@ return {
       vim.cmd.colorscheme("dracula")
     end,
   },
+  -- ========== Mini Comment ==========
   {
     "nvim-mini/mini.comment",
     version = false,
@@ -100,6 +103,7 @@ return {
       end, { expr = true, desc = "Toggle comment selection" })
     end,
   },
+  -- ========== Flash ==========
   {
     "folke/flash.nvim",
     event = "VeryLazy",
@@ -128,6 +132,7 @@ return {
       },
     },
   },
+  -- ========== Telescope ==========
   {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
@@ -154,17 +159,47 @@ return {
     opts = function()
       local actions = require("telescope.actions")
 
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "TelescopePreviewerLoaded",
+        group = vim.api.nvim_create_augroup("TelescopePreviewNumbers", { clear = true }),
+        callback = function()
+          vim.wo.number = true
+          vim.wo.relativenumber = false
+        end,
+      })
+
       return {
         defaults = {
+          sorting_strategy = "ascending",
+          layout_strategy = "flex",
+          layout_config = {
+            width = 0.95,
+            height = 0.85,
+            prompt_position = "top",
+            flex = {
+              flip_columns = 120,
+              flip_lines = 1,
+            },
+            horizontal = {
+              preview_width = 0.6,
+              preview_cutoff = 0,
+            },
+            vertical = {
+              preview_height = 0.55,
+              preview_cutoff = 0,
+            },
+          },
           file_ignore_patterns = {
             "^%.git/",
           },
           mappings = {
             i = {
+              ["<Esc>"] = actions.close,
               ["<C-j>"] = actions.move_selection_next,
               ["<C-k>"] = actions.move_selection_previous,
             },
             n = {
+              ["<Esc>"] = actions.close,
               ["<C-j>"] = actions.move_selection_next,
               ["<C-k>"] = actions.move_selection_previous,
             },
@@ -178,6 +213,7 @@ return {
       }
     end,
   },
+  -- ========== Twilight ==========
   {
     "folke/twilight.nvim",
     cmd = "Twilight",
@@ -188,6 +224,7 @@ return {
       treesitter = false,
     },
   },
+  -- ========== Lualine ==========
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
