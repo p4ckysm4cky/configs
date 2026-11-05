@@ -36,6 +36,20 @@ pi() {
     bwcwdagent pi "$@"
 }
 
+# Yazi: return to the browsed directory on q; Q keeps the current directory.
+y() {
+    local yazi_tmp yazi_cwd yazi_exit
+    yazi_tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
+    command yazi "$@" --cwd-file="$yazi_tmp"
+    yazi_exit=$?
+    IFS= read -r -d '' yazi_cwd < "$yazi_tmp" || true
+    if [ -n "$yazi_cwd" ] && [ "$yazi_cwd" != "$PWD" ] && [ -d "$yazi_cwd" ]; then
+        builtin cd -- "$yazi_cwd"
+    fi
+    command rm -f -- "$yazi_tmp"
+    return "$yazi_exit"
+}
+
 # Setup starship
 eval "$(starship init bash)"
 

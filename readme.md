@@ -8,6 +8,7 @@
 - zoxide
 - tmux
 - ranger
+- yazi
 - bat (batcat)
 - tree
 - rg (ripgrep)
@@ -34,4 +35,5 @@ Stow-compatible folders:
 - `starship`
 - `tmux`
 - `vim`
+- `yazi`
 - `zsh`
