@@ -1,5 +1,6 @@
 ## Tools
 
+- zsh
 - nvm
 - tldr
 - fzf

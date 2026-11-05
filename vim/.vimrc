@@ -21,8 +21,8 @@ set autoindent
 set smartindent
 
 " Navigation
-noremap j gj
-noremap k gk
+noremap <expr> j v:count ? 'j' : 'gj'
+noremap <expr> k v:count ? 'k' : 'gk'
 
 noremap <S-h> gT
 noremap <S-l> gt

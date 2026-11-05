@@ -1,6 +1,11 @@
 -- Navigation
-vim.keymap.set("", "j", "gj")
-vim.keymap.set("", "k", "gk")
+-- Follow wrapped rows unless a count is given (e.g. 5j).
+vim.keymap.set("", "j", function()
+  return vim.v.count > 0 and "j" or "gj"
+end, { expr = true })
+vim.keymap.set("", "k", function()
+  return vim.v.count > 0 and "k" or "gk"
+end, { expr = true })
 
 vim.keymap.set("", "<S-h>", "gT")
 vim.keymap.set("", "<S-l>", "gt")
