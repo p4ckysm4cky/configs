@@ -213,6 +213,18 @@ return {
       }
     end,
   },
+  {
+    "mikavilpas/yazi.nvim",
+    version = "*",
+    cmd = "Yazi",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<C-e>", "<cmd>Yazi cwd<cr>", desc = "Browse working directory with Yazi" },
+    },
+    opts = {},
+  },
   -- ========== Twilight ==========
   {
     "folke/twilight.nvim",
