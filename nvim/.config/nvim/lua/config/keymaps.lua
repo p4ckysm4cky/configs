@@ -48,6 +48,9 @@ vim.keymap.set("n", "<leader>m", "<cmd>delmarks!<CR>")
 vim.keymap.set("n", "<leader>M", "<cmd>delmarks A-Z<CR>")
 
 -- Clipboard binds
+vim.keymap.set("x", "p", '"_dP', {
+  desc = "Paste without replacing register",
+})
 vim.keymap.set("n", "Y", '"+yy')
 vim.keymap.set("v", "Y", '"+y')
 vim.keymap.set("v", "P", '"+p')

@@ -66,6 +66,7 @@ nnoremap <leader>m :delm!<CR>
 nnoremap <leader>M :delm A-Z<CR>
 
 " Clipboard binds
+xnoremap p "_dP
 nnoremap Y "+y
 vnoremap Y "+y
 vnoremap P "+p
