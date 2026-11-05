@@ -224,6 +224,19 @@ return {
       treesitter = false,
     },
   },
+  {
+    "esmuellert/codediff.nvim",
+    cmd = "CodeDiff",
+    opts = {
+      highlights = {
+        line_insert = "#28382e",
+        char_insert = "#35543e",
+      },
+    },
+    keys = {
+      { "<leader>gd", "<cmd>CodeDiff<cr>", desc = "Review Git changes" },
+    },
+  },
   -- ========== Lualine ==========
   {
     "nvim-lualine/lualine.nvim",
