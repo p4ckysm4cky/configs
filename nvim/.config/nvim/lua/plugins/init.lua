@@ -221,7 +221,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<C-e>", "<cmd>Yazi cwd<cr>", desc = "Browse working directory with Yazi" },
+      { "<C-e>", "<cmd>Yazi<cr>", desc = "Browse current file with Yazi" },
     },
     opts = {},
   },
