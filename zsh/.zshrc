@@ -80,6 +80,16 @@ bwagentdev() {
 
 # Shared guarded sandbox policy with network access and minimal host mounts.
 _bwguard() {
+    local working_directory=${PWD:A}
+    local home_directory=${HOME:A}
+    local launch_directory_is_unsafe=false
+    [[ "$working_directory" == / || "$working_directory" == "$home_directory" ]] && launch_directory_is_unsafe=true
+
+    if "$launch_directory_is_unsafe"; then
+        print -u2 'guard: refusing to run from / or your home directory. Change to a project directory first'
+        return 1
+    fi
+
     bwrap \
         --unshare-all \
         --share-net \
@@ -93,6 +103,7 @@ _bwguard() {
         --setenv LANG "${LANG:-C.UTF-8}" \
         --setenv XDG_CACHE_HOME /tmp/cache \
         --ro-bind /usr /usr \
+        --symlink usr/bin /bin \
         --ro-bind /lib /lib \
         --ro-bind /lib64 /lib64 \
         --ro-bind /etc/ssl/certs /etc/ssl/certs \
@@ -111,9 +122,9 @@ bwguard() {
     _bwguard -- "${@:-/usr/bin/sh}"
 }
 
-piguard() {
+pi() {
     if [[ -z ${NVM_BIN:-} ]]; then
-        print -u2 'piguard: NVM_BIN is not set'
+        print -u2 'pi: NVM_BIN is not set'
         return 1
     fi
 
@@ -126,9 +137,9 @@ piguard() {
         -- pi "$@"
 }
 
-codexguard() {
+codex() {
     if [[ -z ${NVM_BIN:-} ]]; then
-        print -u2 'codexguard: NVM_BIN is not set'
+        print -u2 'codex: NVM_BIN is not set'
         return 1
     fi
 
@@ -142,9 +153,9 @@ codexguard() {
         -c 'approvals_reviewer="auto_review"' "$@"
 }
 
-opencodeguard() {
+opencode() {
     if [[ -z ${NVM_BIN:-} ]]; then
-        print -u2 'opencodeguard: NVM_BIN is not set'
+        print -u2 'opencode: NVM_BIN is not set'
         return 1
     fi
 
