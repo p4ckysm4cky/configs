@@ -78,10 +78,6 @@ bwagentdev() {
         "${@:-/bin/sh}"
 }
 
-pi() {
-    bwagentdev pi "$@"
-}
-
 # Shared guarded sandbox policy with network access and minimal host mounts.
 _bwguard() {
     bwrap \
