@@ -90,6 +90,7 @@ _bwguard() {
         return 1
     fi
 
+    # dotnet restore requires /etc/passwd for user lookup.
     bwrap \
         --unshare-all \
         --share-net \
@@ -108,6 +109,7 @@ _bwguard() {
         --ro-bind /lib64 /lib64 \
         --ro-bind /etc/ssl/certs /etc/ssl/certs \
         --ro-bind /etc/resolv.conf /etc/resolv.conf \
+        --ro-bind /etc/passwd /etc/passwd \
         --bind "$PWD" "$PWD" \
         --ro-bind-try "$PWD/.git" "$PWD/.git" \
         --chdir "$PWD" \
