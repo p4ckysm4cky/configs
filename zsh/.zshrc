@@ -109,6 +109,7 @@ _bwguard() {
         --ro-bind /etc/ssl/certs /etc/ssl/certs \
         --ro-bind /etc/resolv.conf /etc/resolv.conf \
         --bind "$PWD" "$PWD" \
+        --ro-bind-try "$PWD/.git" "$PWD/.git" \
         --chdir "$PWD" \
         --tmpfs /tmp \
         --proc /proc \
